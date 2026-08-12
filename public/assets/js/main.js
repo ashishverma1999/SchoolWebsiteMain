@@ -518,18 +518,20 @@
     $('#year').text(new Date().getFullYear());
   });
   
-	var swiper2 = new Swiper(".testimonial-slider", {
-		loop: true,
-		spaceBetween: 10,
-		effect: 'fade',
-		navigation: {
-			nextEl: ".xb-swiper-arrow-next",
-			prevEl: ".xb-swiper-arrow-prev",
-		},
-		thumbs: {
-			swiper: dcTestimonialSwiper,
-		},
-	});
+	if (typeof dcTestimonialSwiper !== 'undefined') {
+		var swiper2 = new Swiper(".testimonial-slider", {
+			loop: true,
+			spaceBetween: 10,
+			effect: 'fade',
+			navigation: {
+				nextEl: ".xb-swiper-arrow-next",
+				prevEl: ".xb-swiper-arrow-prev",
+			},
+			thumbs: {
+				swiper: dcTestimonialSwiper,
+			},
+		});
+	}
   
 
 

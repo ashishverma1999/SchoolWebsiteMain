@@ -69,6 +69,8 @@
 
     @include('partials.offcanvas')
 
+    <div id="anywhere-home"></div>
+
     <main id="main-content">
         @if(session('success'))
             <div class="container mt-3">
