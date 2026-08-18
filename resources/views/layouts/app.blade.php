@@ -326,22 +326,41 @@
        ========================================================= */
 
         .principal-photo {
-            width: min(170px, 100%);
-            aspect-ratio: 3 / 4;
+            width: 170px;
+            height: auto;
+            margin: 0 auto;
+
+            overflow: hidden;
 
             background: #f8f9fa;
 
-            overflow: hidden;
+            border-radius: 12px;
         }
 
         .principal-photo img {
+            display: block;
+
             width: 100%;
-            height: 100%;
+            height: auto;
 
-            object-fit: contain;
-            object-position: center top;
+            max-width: 100%;
 
-            background: #151924;
+            object-fit: initial;
+            object-position: center;
+
+            background: transparent;
+        }
+
+        @media (max-width: 767.98px) {
+            .principal-photo {
+                width: min(220px, 72vw);
+                height: auto;
+            }
+
+            .principal-photo img {
+                width: 100%;
+                height: auto;
+            }
         }
 
 
@@ -408,23 +427,174 @@
 
 
         /* =========================================================
-       MOBILE
-       ========================================================= */
+   MOBILE
+   ========================================================= */
 
         @media (max-width: 767.98px) {
+
+            /* -----------------------------------------------------
+       GENERAL MOBILE
+       ----------------------------------------------------- */
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden !important;
+            }
 
             .container {
                 padding-left: 16px !important;
                 padding-right: 16px !important;
             }
 
-            /* Full-width mobile banner */
+
+            /* =====================================================
+       TOP BAR - KEEP COMPACT
+       ===================================================== */
+
+            .top-bar {
+                width: 100% !important;
+                height: auto !important;
+                min-height: 0 !important;
+                margin: 0 !important;
+                padding: 4px 0 !important;
+                position: relative !important;
+            }
+
+            .header11topDown {
+                width: 100% !important;
+                height: auto !important;
+                min-height: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                position: relative !important;
+            }
+
+            .top-bar .container,
+            .top-bar .container-fluid,
+            .header11topDown,
+            .header11topDown .container,
+            .header11topDown .container-fluid {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+
+            /* =====================================================
+       HEADER - REDUCE LARGE WHITE SPACE
+       ===================================================== */
+
+            .header,
+            .header.header__sticky {
+                width: 100% !important;
+                height: auto !important;
+                min-height: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                position: relative !important;
+                z-index: 21 !important;
+            }
+
+            .header .container,
+            .header .container-fluid {
+                min-height: 0 !important;
+                height: auto !important;
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .header.v__2 .header__wrapper,
+            .header__wrapper {
+                height: auto !important;
+                min-height: 0 !important;
+                margin-top: 0 !important;
+                padding: 6px 0 !important;
+            }
+
+
+            /* =====================================================
+       HEADER LOGO
+       ===================================================== */
+
+            .header__logo {
+                display: flex !important;
+                align-items: center !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                min-height: 0 !important;
+            }
+
+            .header__logo img {
+                width: 44px !important;
+                height: 44px !important;
+                max-width: 44px !important;
+                max-height: 44px !important;
+                object-fit: contain !important;
+                margin-right: 8px !important;
+            }
+
+            .brand-title {
+                font-size: 14px !important;
+                line-height: 1.1 !important;
+                margin: 0 !important;
+            }
+
+            .brand-subtitle {
+                font-size: 9px !important;
+                line-height: 1.1 !important;
+                margin: 2px 0 0 !important;
+            }
+
+
+            /* =====================================================
+       MOBILE MENU BUTTON
+       ===================================================== */
+
+            .header__nav,
+            .main-menu,
+            .main-menu-wrapper,
+            .header__menu {
+                height: auto !important;
+                min-height: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .menu-toggle,
+            .hamburger-menu,
+            .menu-btn {
+                margin: 0 !important;
+            }
+
+            .menu__trigger {
+                padding: 6px 10px !important;
+                min-height: 0 !important;
+                height: auto !important;
+            }
+
+
+            /* =====================================================
+       HERO - FULL WIDTH
+       ===================================================== */
+
             .home-hero {
                 width: 100vw !important;
                 max-width: 100vw !important;
+
                 left: 0 !important;
+
                 margin-left: 0 !important;
                 margin-right: 0 !important;
+
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+
                 transform: none !important;
             }
 
@@ -435,6 +605,8 @@
                 height: 75vh !important;
                 min-height: 500px !important;
                 max-height: none !important;
+
+                margin-top: 0 !important;
             }
 
             .slide-item {
@@ -463,7 +635,10 @@
             }
 
 
-            /* Mobile hero content */
+            /* =====================================================
+       HERO CONTENT
+       ===================================================== */
+
             .home-hero__content {
                 width: calc(100% - 30px) !important;
                 max-width: none !important;
@@ -483,7 +658,10 @@
             }
 
 
-            /* Mobile navigation */
+            /* =====================================================
+       HERO NAVIGATION
+       ===================================================== */
+
             .banner-nav-btn {
                 width: 36px !important;
                 height: 36px !important;
@@ -500,32 +678,28 @@
             }
 
 
-            /* Mobile dots */
+            /* =====================================================
+       HERO DOTS
+       ===================================================== */
+
             .slider-dots {
                 margin-bottom: 12px !important;
             }
 
 
-            /* Mobile brand */
-            .brand-title {
-                font-size: 14px !important;
-                line-height: 1.15 !important;
+            /* =====================================================
+       NOTICE TICKER
+       ===================================================== */
+
+            .notice-ticker {
+                margin: 0 !important;
+                padding-top: 6px !important;
+                padding-bottom: 6px !important;
             }
 
-            .brand-subtitle {
-                font-size: 10px !important;
-            }
-
-            .header__logo img {
-                width: 48px !important;
-                height: 48px !important;
-            }
-
-
-            /* Mobile notice ticker */
             .notice-ticker .container-fluid {
                 display: flex !important;
-                align-items: flex-start !important;
+                align-items: center !important;
                 gap: 8px;
             }
 
@@ -534,18 +708,72 @@
             }
 
 
-            /* Principal card */
+            /* =====================================================
+       PRINCIPAL CARD
+       ===================================================== */
+
+            .principal-message-card {
+                margin-top: 0 !important;
+            }
+
             .principal-message-card .card-header,
             .principal-message-card .card-body {
                 text-align: center;
             }
 
-            .principal-photo {
-                width: min(220px, 72vw);
+            .principal-message-card .card-header {
+                padding: 12px !important;
+            }
+
+            .principal-message-card .card-body {
+                padding: 12px !important;
             }
 
 
-            /* Older slider button compatibility */
+            /* =====================================================
+       PRINCIPAL PHOTO
+       SHOW FULL IMAGE - NO BLACK/WHITE EMPTY SPACE
+       ===================================================== */
+
+            .principal-photo {
+                width: min(220px, 72vw) !important;
+
+                height: auto !important;
+                aspect-ratio: auto !important;
+
+                margin-left: auto !important;
+                margin-right: auto !important;
+
+                overflow: hidden !important;
+
+                background: #f8f9fa !important;
+
+                border-radius: 12px !important;
+            }
+
+            .principal-photo img {
+                display: block !important;
+
+                width: 100% !important;
+                height: auto !important;
+
+                min-width: 0 !important;
+                min-height: 0 !important;
+
+                max-width: 100% !important;
+                max-height: none !important;
+
+                object-fit: initial !important;
+                object-position: center center !important;
+
+                background: transparent !important;
+            }
+
+
+            /* =====================================================
+       OLDER SLIDER BUTTON COMPATIBILITY
+       ===================================================== */
+
             .slider-btn {
                 width: 36px !important;
                 height: 36px !important;
@@ -555,8 +783,8 @@
 
 
         /* =========================================================
-       SMALL MOBILE DEVICES
-       ========================================================= */
+   SMALL MOBILE DEVICES
+   ========================================================= */
 
         @media (max-width: 480px) {
 
@@ -583,16 +811,21 @@
             .banner-nav-btn.next-btn {
                 right: 6px !important;
             }
+
+            .principal-photo {
+                width: min(200px, 70vw) !important;
+            }
         }
 
 
         /* =========================================================
    FACILITY IMAGES
-   Show complete image without cropping
+   SHOW COMPLETE IMAGE
    ========================================================= */
 
         .facility-image-wrapper {
             position: relative;
+
             width: 100%;
             height: 300px;
 
@@ -622,28 +855,25 @@
 
             background: #f8f9fa;
 
-            /* Prevent theme CSS from shrinking the image */
             flex: 1 1 auto;
         }
 
-
-        /* =========================================================
-   FACILITY CARDS
-   ========================================================= */
-
         .facility-image-wrapper .badge {
             position: absolute !important;
+
             top: 12px !important;
             right: 12px !important;
+
             z-index: 5 !important;
         }
 
 
         /* =========================================================
-   TABLET
+   TABLET FACILITY IMAGES
    ========================================================= */
 
         @media (max-width: 991.98px) {
+
             .facility-image-wrapper {
                 height: 280px;
             }
@@ -651,10 +881,11 @@
 
 
         /* =========================================================
-   MOBILE
+   MOBILE FACILITY IMAGES
    ========================================================= */
 
         @media (max-width: 767.98px) {
+
             .facility-image-wrapper {
                 height: 260px;
             }
@@ -662,16 +893,19 @@
             .facility-image {
                 width: 100% !important;
                 height: 100% !important;
+
                 object-fit: contain !important;
+                object-position: center center !important;
             }
         }
 
 
         /* =========================================================
-   SMALL MOBILE
+   SMALL MOBILE FACILITY IMAGES
    ========================================================= */
 
         @media (max-width: 480px) {
+
             .facility-image-wrapper {
                 height: 240px;
             }
