@@ -4,7 +4,6 @@
 .npmrc
 .phpunit.result.cache
 Dockerfile
-docker-entrypoint.sh
 node_modules
 vendor
 public/build
