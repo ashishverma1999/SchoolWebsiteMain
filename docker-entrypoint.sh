@@ -9,6 +9,7 @@ php artisan cache:clear || true
 
 # Rebuild configuration, routes, and view caches for optimal production speed
 echo "Caching Laravel configuration, routes, and views..."
+php artisan package:discover --ansi || true
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache

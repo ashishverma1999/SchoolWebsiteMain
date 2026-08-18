@@ -57,8 +57,8 @@ COPY . .
 # Copy built frontend assets from the node-builder stage
 COPY --from=node-builder /app/public/build ./public/build
 
-# Install PHP packages for production (skip development dependencies)
-RUN composer install --no-dev --optimize-autoloader --no-interaction
+# Install PHP packages for production (skip development dependencies and scripts)
+RUN composer install --no-dev --optimize-autoloader --no-interaction --no-scripts
 
 # Create SQLite database file if it doesn't exist and set proper owner/permissions
 RUN mkdir -p database && touch database/database.sqlite
