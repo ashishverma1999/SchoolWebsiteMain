@@ -462,14 +462,6 @@
                 position: relative !important;
             }
 
-            .header11topDown {
-                width: 100% !important;
-                height: auto !important;
-                min-height: 0 !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                position: relative !important;
-            }
 
             .top-bar .container,
             .top-bar .container-fluid,
@@ -519,8 +511,8 @@
 
 
             /* =====================================================
-       HEADER LOGO
-       ===================================================== */
+            HEADER LOGO
+            ===================================================== */
 
             .header__logo {
                 display: flex !important;
@@ -553,8 +545,8 @@
 
 
             /* =====================================================
-       MOBILE MENU BUTTON
-       ===================================================== */
+            MOBILE MENU BUTTON
+            ===================================================== */
 
             .header__nav,
             .main-menu,
@@ -580,8 +572,8 @@
 
 
             /* =====================================================
-       HERO - FULL WIDTH
-       ===================================================== */
+            HERO - FULL WIDTH
+            ===================================================== */
 
             .home-hero {
                 width: 100vw !important;
@@ -636,8 +628,8 @@
 
 
             /* =====================================================
-       HERO CONTENT
-       ===================================================== */
+            HERO CONTENT
+            ===================================================== */
 
             .home-hero__content {
                 width: calc(100% - 30px) !important;
@@ -659,8 +651,8 @@
 
 
             /* =====================================================
-       HERO NAVIGATION
-       ===================================================== */
+            HERO NAVIGATION
+            ===================================================== */
 
             .banner-nav-btn {
                 width: 36px !important;
@@ -679,8 +671,8 @@
 
 
             /* =====================================================
-       HERO DOTS
-       ===================================================== */
+            HERO DOTS
+            ===================================================== */
 
             .slider-dots {
                 margin-bottom: 12px !important;
@@ -688,8 +680,8 @@
 
 
             /* =====================================================
-       NOTICE TICKER
-       ===================================================== */
+            NOTICE TICKER
+            ===================================================== */
 
             .notice-ticker {
                 margin: 0 !important;
@@ -709,8 +701,8 @@
 
 
             /* =====================================================
-       PRINCIPAL CARD
-       ===================================================== */
+            PRINCIPAL CARD
+            ===================================================== */
 
             .principal-message-card {
                 margin-top: 0 !important;
@@ -731,9 +723,9 @@
 
 
             /* =====================================================
-       PRINCIPAL PHOTO
-       SHOW FULL IMAGE - NO BLACK/WHITE EMPTY SPACE
-       ===================================================== */
+            PRINCIPAL PHOTO
+            SHOW FULL IMAGE - NO BLACK/WHITE EMPTY SPACE
+            ===================================================== */
 
             .principal-photo {
                 width: min(220px, 72vw) !important;
@@ -771,8 +763,8 @@
 
 
             /* =====================================================
-       OLDER SLIDER BUTTON COMPATIBILITY
-       ===================================================== */
+            OLDER SLIDER BUTTON COMPATIBILITY
+            ===================================================== */
 
             .slider-btn {
                 width: 36px !important;
@@ -783,8 +775,8 @@
 
 
         /* =========================================================
-   SMALL MOBILE DEVICES
-   ========================================================= */
+        SMALL MOBILE DEVICES
+        ========================================================= */
 
         @media (max-width: 480px) {
 
@@ -819,9 +811,9 @@
 
 
         /* =========================================================
-   FACILITY IMAGES
-   SHOW COMPLETE IMAGE
-   ========================================================= */
+        FACILITY IMAGES
+        SHOW COMPLETE IMAGE
+        ========================================================= */
 
         .facility-image-wrapper {
             position: relative;
@@ -869,8 +861,8 @@
 
 
         /* =========================================================
-   TABLET FACILITY IMAGES
-   ========================================================= */
+        TABLET FACILITY IMAGES
+        ========================================================= */
 
         @media (max-width: 991.98px) {
 
@@ -881,8 +873,8 @@
 
 
         /* =========================================================
-   MOBILE FACILITY IMAGES
-   ========================================================= */
+        MOBILE FACILITY IMAGES
+        ========================================================= */
 
         @media (max-width: 767.98px) {
 
@@ -901,13 +893,265 @@
 
 
         /* =========================================================
-   SMALL MOBILE FACILITY IMAGES
-   ========================================================= */
+        SMALL MOBILE FACILITY IMAGES
+        ========================================================= */
 
         @media (max-width: 480px) {
 
             .facility-image-wrapper {
                 height: 240px;
+            }
+        }
+
+
+        /* =========================================================
+        TOP CONTACT BAR
+        ========================================================= */
+
+        .top-bar {
+            width: 100%;
+            margin: 0;
+            padding: 0 !important;
+
+            background: #212529 !important;
+        }
+
+        .top-bar-inner {
+            width: 100%;
+            max-width: 100%;
+
+            min-height: 44px;
+
+            padding: 6px 18px !important;
+
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+
+            gap: 20px;
+
+            flex-wrap: nowrap !important;
+        }
+
+
+        /* =========================================================
+        CONTACT DETAILS
+        ========================================================= */
+
+        .contact-details {
+            display: flex;
+            align-items: center;
+
+            gap: 16px;
+
+            min-width: 0;
+
+            white-space: nowrap;
+        }
+
+        .contact-item {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 5px;
+
+            font-size: 14px;
+            line-height: 1;
+
+            white-space: nowrap;
+        }
+
+        .contact-item i {
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+
+        /* Affiliation */
+        .affiliation-badge {
+            display: inline-flex;
+            align-items: center;
+
+            padding: 4px 8px;
+
+            font-size: 11px;
+            line-height: 1;
+
+            border-radius: 3px;
+
+            background: #5631ff;
+            color: #fff;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================================
+        SOCIAL ICONS
+        ========================================================= */
+
+        .top-bar .social-icons {
+            display: flex !important;
+
+            align-items: center !important;
+            justify-content: center !important;
+
+            gap: 22px;
+
+            flex-shrink: 0;
+
+            white-space: nowrap;
+        }
+
+        .top-bar .social-icons a {
+            width: 24px;
+            height: 24px;
+
+            display: flex !important;
+
+            align-items: center !important;
+            justify-content: center !important;
+
+            text-decoration: none;
+
+            line-height: 1;
+        }
+
+        .top-bar .social-icons i {
+            font-size: 16px;
+        }
+
+
+        /* =========================================================
+   MOBILE
+   ========================================================= */
+
+        @media (max-width: 767.98px) {
+
+            .top-bar {
+                width: 100% !important;
+                height: auto !important;
+                min-height: 0 !important;
+
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .top-bar-inner {
+                min-height: 42px !important;
+                height: 42px !important;
+
+                padding: 5px 10px !important;
+
+                gap: 8px !important;
+
+                justify-content: space-between !important;
+
+                flex-wrap: nowrap !important;
+            }
+
+
+            /* Contact section */
+            .contact-details {
+                display: flex !important;
+
+                align-items: center !important;
+
+                gap: 8px !important;
+
+                min-width: 0 !important;
+
+                flex: 1 1 auto !important;
+
+                overflow: hidden !important;
+            }
+
+
+            /* Phone */
+            .phone-link {
+                flex-shrink: 0 !important;
+
+                max-width: none !important;
+
+                font-size: 12px !important;
+            }
+
+            .phone-link span {
+                display: inline !important;
+
+                white-space: nowrap !important;
+            }
+
+
+            /* Email: icon only on mobile */
+            .email-link {
+                width: 22px !important;
+                height: 22px !important;
+
+                flex-shrink: 0 !important;
+
+                justify-content: center !important;
+            }
+
+            .email-link span {
+                display: none !important;
+            }
+
+            .email-link i {
+                font-size: 14px !important;
+            }
+
+
+            /* Hide affiliation on mobile */
+            .affiliation-badge {
+                display: none !important;
+            }
+
+
+            /* Social icons */
+            .top-bar .social-icons {
+                display: flex !important;
+
+                align-items: center !important;
+                justify-content: flex-end !important;
+
+                gap: 18px !important;
+
+                flex-shrink: 0 !important;
+            }
+
+            .top-bar .social-icons a {
+                width: 22px !important;
+                height: 22px !important;
+            }
+
+            .top-bar .social-icons i {
+                font-size: 16px !important;
+            }
+        }
+
+
+        /* =========================================================
+        VERY SMALL PHONES
+        ========================================================= */
+
+        @media (max-width: 400px) {
+
+            .top-bar-inner {
+                padding-left: 8px !important;
+                padding-right: 8px !important;
+            }
+
+            .phone-link {
+                font-size: 11px !important;
+            }
+
+            .top-bar .social-icons {
+                gap: 13px !important;
+            }
+
+            .top-bar .social-icons i {
+                font-size: 15px !important;
             }
         }
     </style>

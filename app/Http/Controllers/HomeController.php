@@ -13,22 +13,22 @@ class HomeController extends Controller
 
         $banners = [
             [
-                'image' => 'assets/images/banner/2.jpg',
+                'image' => 'assets/images/banner/banner1.jpg',
                 'title' => 'Welcome to ' . $schoolName,
                 'subtitle' => $schoolLocation,
             ],
             [
-                'image' => 'assets/images/banner/breadcrumb.jpg',
+                'image' => 'assets/images/banner/banner2.jpg',
                 'title' => 'Empowering Minds, Shaping Futures',
                 'subtitle' => 'Excellence in Education & Character Building',
             ],
             [
-                'image' => 'assets/images/banner/2.jpg',
+                'image' => 'assets/images/banner/banner3.jpg',
                 'title' => 'Modern Infrastructure & Facilities',
                 'subtitle' => 'Nurturing Potential in Every Student',
             ],
             [
-                'image' => 'assets/images/banner/breadcrumb.jpg',
+                'image' => 'assets/images/banner/banner4.jpg',
                 'title' => 'Dedicated Faculty & Staff',
                 'subtitle' => 'Guiding Students Towards Excellence',
             ]
