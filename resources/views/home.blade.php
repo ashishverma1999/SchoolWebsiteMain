@@ -15,34 +15,34 @@
             <div class="home-hero__overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%); z-index: 2; pointer-events: none;"></div>
 
             <!-- Banner Content -->
-            <div class="container h-100 position-relative d-flex align-items-center px-4 px-md-5" style="z-index: 3;">
-                <div class="hero__content-wrap home-hero__content py-3 py-md-4 px-3 px-md-4 text-white my-auto ms-md-4 ms-lg-5">
-                    <span class="badge bg-warning text-dark px-3 py-2 text-uppercase mb-2 fw-bold shadow-sm" style="letter-spacing: 1px; font-size: clamp(11px, 2.5vw, 13px);">{{ $banner['subtitle'] }}</span>
-                    <h1 class="text-white fw-bold mb-2 mb-md-3" style="font-size: clamp(1.4rem, 4vw, 2.5rem); line-height: 1.25;">{{ $banner['title'] }}</h1>
-                    <p class="text-light lead d-none d-sm-block mb-3 mb-md-4" style="font-size: clamp(0.88rem, 1.8vw, 1.05rem);">Dedicated to academic excellence, moral discipline, and holistic child development.</p>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="{{ route('admission') }}" class="btn btn-primary px-3 px-md-4 py-2 fw-bold rounded-pill shadow">Apply For Admission</a>
-                        <a href="{{ route('about') }}" class="btn btn-outline-light px-3 px-md-4 py-2 rounded-pill">Explore School</a>
-                    </div>
+            
+            <div class="hero__content-wrap home-hero__content py-3 py-md-4 px-3 px-md-4 text-white my-auto ms-md-4 ms-lg-5">
+                <span class="badge bg-warning text-dark px-3 py-2 text-uppercase mb-2 fw-bold shadow-sm" style="letter-spacing: 1px; font-size: clamp(11px, 2.5vw, 13px);">{{ $banner['subtitle'] }}</span>
+                <h1 class="text-white fw-bold mb-2 mb-md-3" style="font-size: clamp(1.4rem, 4vw, 2.5rem); line-height: 1.25;">{{ $banner['title'] }}</h1>
+                <p class="text-light lead d-none d-sm-block mb-3 mb-md-4" style="font-size: clamp(0.88rem, 1.8vw, 1.05rem);">Dedicated to academic excellence, moral discipline, and holistic child development.</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="{{ route('admission') }}" class="btn btn-primary px-3 px-md-4 py-2 fw-bold rounded-pill shadow">Apply For Admission</a>
+                    <a href="{{ route('about') }}" class="btn btn-outline-light px-3 px-md-4 py-2 rounded-pill">Explore School</a>
                 </div>
             </div>
         </div>
+    </div>
+    @endforeach
+
+    <!-- Navigation Buttons Floating on Left and Right Edges -->
+    <button class="banner-nav-btn prev-btn" onclick="moveSlide(-1)" aria-label="Previous Slide">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="banner-nav-btn next-btn" onclick="moveSlide(1)" aria-label="Next Slide">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Slider Dots -->
+    <div class="slider-dots position-absolute bottom-0 start-50 translate-middle-x mb-3 d-flex gap-2" style="z-index: 10;">
+        @foreach($banners as $index => $banner)
+        <span class="dot-item {{ $index === 0 ? 'active' : '' }} rounded-pill bg-white" style="width: {{ $index === 0 ? '24px' : '10px' }}; height: 10px; opacity: {{ $index === 0 ? 1 : 0.5 }}; cursor: pointer; transition: all 0.3s ease;" onclick="goToSlide({{ $index }})"></span>
         @endforeach
-
-        <!-- Navigation Buttons Floating on Left and Right Edges -->
-        <button class="banner-nav-btn prev-btn" onclick="moveSlide(-1)" aria-label="Previous Slide">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="banner-nav-btn next-btn" onclick="moveSlide(1)" aria-label="Next Slide">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <!-- Slider Dots -->
-        <div class="slider-dots position-absolute bottom-0 start-50 translate-middle-x mb-3 d-flex gap-2" style="z-index: 10;">
-            @foreach($banners as $index => $banner)
-            <span class="dot-item {{ $index === 0 ? 'active' : '' }} rounded-pill bg-white" style="width: {{ $index === 0 ? '24px' : '10px' }}; height: 10px; opacity: {{ $index === 0 ? 1 : 0.5 }}; cursor: pointer; transition: all 0.3s ease;" onclick="goToSlide({{ $index }})"></span>
-            @endforeach
-        </div>
+    </div>
     </div>
 </section>
 

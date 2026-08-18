@@ -1154,6 +1154,22 @@
                 font-size: 15px !important;
             }
         }
+
+        .hero-content-up {
+            transform: translateY(-35px);
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-content-up {
+                transform: translateY(-45px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content-up {
+                transform: translateY(-35px);
+            }
+        }
     </style>
 
     @stack('styles')
