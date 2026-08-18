@@ -5,10 +5,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="footer-widget">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="{{ asset(config('school.logo')) }}" alt="{{ config('school.name') }}" height="60" class="me-3 rounded-circle bg-white p-1">
-                        <div>
-                            <h4 class="text-white mb-0 fw-bold" style="font-size: 20px;">{{ config('school.name') }}</h4>
-                            <p class="text-secondary small mb-0">{{ config('school.location') }}</p>
+                        <img src="{{ asset(config('school.logo')) }}" alt="{{ config('school.name') }}" style="width: 55px; height: 55px; max-width: 55px; max-height: 55px; object-fit: contain; flex-shrink: 0;" class="me-3 rounded-circle bg-white p-1">
+                        <div class="flex-grow-1 min-w-0">
+                            <h4 class="text-white mb-0 fw-bold" style="font-size: 18px; line-height: 1.25; word-wrap: break-word;">{{ config('school.name') }}</h4>
+                            <p class="text-secondary small mb-0" style="font-size: 12px;">{{ config('school.location') }}</p>
                         </div>
                     </div>
                     <p class="text-light small mb-3">

@@ -3,7 +3,7 @@
     <button class="close-icon-menu"><i class="fa-sharp fa-solid fa-xmark"></i></button>
     
     <div class="thumbnail mb-3 text-center">
-        <img src="{{ asset(config('school.logo')) }}" alt="{{ config('school.name') }} Logo" style="max-width: 80px;" class="rounded-circle shadow-sm">
+        <img src="{{ asset(config('school.logo')) }}" alt="{{ config('school.name') }} Logo" style="width: 65px; height: 65px; object-fit: contain;" class="rounded-circle shadow-sm bg-white p-1">
         <h5 class="mt-2 fw-bold text-dark mb-0" style="font-size: 16px;">{{ config('school.name') }}</h5>
         <small class="text-muted" style="font-size: 12px;">{{ config('school.location') }}</small>
     </div>

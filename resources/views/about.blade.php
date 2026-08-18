@@ -23,13 +23,21 @@
             </p>
         </div>
         <div class="col-lg-6">
+            <div class="rounded-4 overflow-hidden shadow-lg mb-4 bg-dark">
+                <img src="{{ asset('assets/images/about/campus.jpg') }}" alt="Campus View" class="w-100 img-fluid-responsive" style="max-height: 380px; width: 100%; object-fit: cover; object-position: center;">
+                <div class="p-3 bg-dark text-white border-top border-secondary">
+                    <h6 class="fw-bold mb-1 text-white"><i class="fa-solid fa-building-columns me-2 text-warning"></i> Campus Assembly & Courtyard</h6>
+                    <small class="text-light">{{ config('school.name') }}, {{ config('school.location') }}</small>
+                </div>
+            </div>
+            
             <div class="p-4 bg-light rounded-4 border shadow-sm">
                 <h4 class="fw-bold text-dark mb-3"><i class="fa-solid fa-bullseye text-primary me-2"></i> Our Core Philosophy</h4>
-                <ul class="list-unstyled lh-lg text-secondary">
+                <ul class="list-unstyled lh-lg text-secondary mb-0">
                     <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i> <strong>Academic Rigor:</strong> Conceptual learning aligned with national standards.</li>
                     <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i> <strong>Character Building:</strong> Inculcating moral, spiritual, and civic values.</li>
                     <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i> <strong>Holistic Growth:</strong> Equal focus on academics, sports, arts, and technology.</li>
-                    <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i> <strong>Safe Environment:</strong> Caring, inclusive, and disciplined campus atmosphere.</li>
+                    <li><i class="fa-solid fa-check-circle text-success me-2"></i> <strong>Safe Environment:</strong> Caring, inclusive, and disciplined campus atmosphere.</li>
                 </ul>
             </div>
         </div>

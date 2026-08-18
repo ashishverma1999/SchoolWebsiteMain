@@ -14,8 +14,8 @@
     <div class="row g-4 align-items-start justify-content-center">
         <div class="col-md-4 text-center">
             <div class="card border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-light">
-                <div class="rounded-3 bg-secondary d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 100%; height: 280px; max-width: 250px;">
-                    <i class="fa-solid fa-user-tie fs-1 text-white"></i>
+                <div class="rounded-3 overflow-hidden mx-auto mb-3 shadow-sm" style="width: 100%; max-width: 240px; aspect-ratio: 3/4; background-color: #e9ecef;">
+                    <img src="{{ asset('assets/images/principal/principal.jpg') }}" alt="Principal, {{ config('school.name') }}" class="w-100 h-100" style="object-fit: cover; object-position: top center;">
                 </div>
                 <h4 class="fw-bold text-dark mb-1">Principal</h4>
                 <p class="text-primary fw-semibold mb-0">{{ config('school.name') }}</p>
