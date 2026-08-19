@@ -7,9 +7,9 @@
                     <div class="header__logo d-flex align-items-center">
                         <a href="{{ route('home') }}" class="d-flex align-items-center text-decoration-none">
                             <img src="{{ asset(config('school.logo')) }}" height="70" width="70" alt="{{ config('school.name') }} Logo" class="me-2 rounded-circle border" style="object-fit: contain; width: 65px; height: 65px;">
-                            <div class="school-name text-dark">
-                                <h5 class="mb-0 fw-bold brand-title" style="font-size: 20px; line-height: 1.2; color: #0b2545;">{{ config('school.name') }}</h5>
-                                <small class="text-secondary fw-semibold brand-subtitle" style="font-size: 13px; display: block;">{{ config('school.location') }}</small>
+                            <div class="school-name">
+                                <h5 class="mb-0 fw-bold brand-title" style="font-size: 20px; line-height: 1.2; color: #580B0D;">{{ config('school.name') }}</h5>
+                                <small class="text-secondary fw-semibold brand-subtitle" style="font-size: 13px; display: block; color: #7A1215 !important;">{{ config('school.location') }}</small>
                             </div>
                         </a>
                     </div>

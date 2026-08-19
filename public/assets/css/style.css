@@ -17,21 +17,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&amp;display=swap");
 :root {
-  --rt-theme: #09A24F;
-  --rt-primary: #890C25;
-  /*--rt-primary-1: #B71A34;*/
-  /*--rt-primary-2: #890C25;*/
-  --rt-primary-1: #002f59;
-  --rt-primary-2: #002f59;
-  --rt-secondary: #110C2D;
-  --rt-footer: #181818;
-  --rt-body: #737477;
+  --rt-theme: #7A1215;
+  --rt-primary: #7A1215;
+  --rt-primary-1: #7A1215;
+  --rt-primary-2: #7A1215;
+  --rt-secondary: #4A0B0D;
+  --rt-footer: #15090A;
+  --rt-body: #555555;
   --rt-heading: #262626;
   --rt-white:#fff;
-  --rt-rating: var(--rt-primary);
+  --rt-rating: #D97706;
   --rt-border: #D9D9D9;
   --rt-line: #eee;
-  --rt-hover: #AF0E2E;
+  --rt-hover: #96171B;
   --copyright-border: #242424;
   --rt-radius:3px;
   --rt-radius-none: none;
@@ -16528,7 +16526,7 @@ body.index-sc h1, body.index-sc h2, body.index-sc h3, body.index-sc h4, body.ind
   cursor: pointer;
 }
 .menu__trigger i{
-    color: #002f59;
+    color: #7A1215;
     position: relative;
     right: 10px;
     font-size: 25px;
@@ -26101,7 +26099,7 @@ body.index-sc h1, body.index-sc h2, body.index-sc h3, body.index-sc h4, body.ind
 
 /* Styling for the top bar */
 .top-bar {
-    background-color: #002f59;
+    background-color: #580B0D;
     color: #fff;
     padding: 5px 0;
     font-size: 14px;
@@ -26206,7 +26204,7 @@ body.index-sc h1, body.index-sc h2, body.index-sc h3, body.index-sc h4, body.ind
 }
 
 .news-section {
-    background-color: #002f59;
+    background-color: #7A1215;
     display: flex;
     align-items: stretch;
     height: 120px;
@@ -26214,7 +26212,7 @@ body.index-sc h1, body.index-sc h2, body.index-sc h3, body.index-sc h4, body.ind
 }
 
 .news-header {
-    background-color: #002f59;
+    background-color: #580B0D;
     color: white;
     padding: 0 40px;
     display: flex;
@@ -26322,7 +26320,7 @@ font-size: 40px;
 /* Swiper Navigation Buttons */
 .news-section .swiper-button-next,
 .news-section .swiper-button-prev {
-    background-color: #002f59;
+    background-color: #7A1215;
     width: 50px;
     height: 50px;
     margin-top: 0;
@@ -26347,7 +26345,7 @@ font-size: 40px;
 
 .news-section .swiper-button-next:hover,
 .news-section .swiper-button-prev:hover {
-    background-color: #1a4a7a;
+    background-color: #9B1B1F;
 }
 
 /* Hide pagination dots */
@@ -26487,7 +26485,7 @@ font-size: 40px;
     width: 600px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 47, 89, 0.15);
+    box-shadow: 0 20px 40px rgba(122, 18, 21, 0.12);
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -26500,11 +26498,11 @@ font-size: 40px;
 
 .academic-calendar-card:hover, .thought-principal-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0, 47, 89, 0.25);
+    box-shadow: 0 30px 60px rgba(122, 18, 21, 0.22);
 }
 
 .academic-card-header {
-    background: linear-gradient(135deg, #002f59 0%, #004080 100%);
+    background: linear-gradient(135deg, #580B0D 0%, #7A1215 100%);
     height: 80px;
     position: relative;
     display: flex;
@@ -26554,7 +26552,7 @@ font-size: 40px;
 .academic-date-number {
     font-size: 48px;
     font-weight: 800;
-    color: #002f59;
+    color: #7A1215;
     line-height: 1;
 }
 
@@ -26569,11 +26567,11 @@ font-size: 40px;
 }
 
 .academic-section-title {
-    color: #002f59;
+    color: #7A1215;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
-    border-bottom: 2px solid #002f59;
+    border-bottom: 2px solid #7A1215;
     padding-bottom: 5px;
 }
 
@@ -26597,10 +26595,10 @@ font-size: 40px;
 }
 
 .academic-event {
-    background: linear-gradient(90deg, rgba(0, 47, 89, 0.05) 0%, rgba(0, 47, 89, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(122, 18, 21, 0.04) 0%, rgba(122, 18, 21, 0.08) 100%);
     padding: 15px;
     border-radius: 12px;
-    border-left: 4px solid #002f59;
+    border-left: 4px solid #7A1215;
     transition: all 0.3s ease;
     height: 80px;
     display: flex;
@@ -26610,12 +26608,12 @@ font-size: 40px;
 
 .academic-event:hover {
     transform: translateX(5px);
-    background: linear-gradient(90deg, rgba(0, 47, 89, 0.1) 0%, rgba(0, 47, 89, 0.15) 100%);
+    background: linear-gradient(90deg, rgba(122, 18, 21, 0.08) 0%, rgba(122, 18, 21, 0.14) 100%);
 }
 
 .academic-event-date {
     font-size: 13px;
-    color: #002f59;
+    color: #7A1215;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -26639,7 +26637,7 @@ font-size: 40px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #002f59;
+    background: #7A1215;
     color: white;
     border: none;
     cursor: pointer;
@@ -26651,7 +26649,7 @@ font-size: 40px;
 }
 
 .academic-swiper-btn:hover {
-    background: #004080;
+    background: #9B1B1F;
     transform: scale(1.1);
 }
 
@@ -26679,7 +26677,7 @@ font-size: 40px;
 }
 
 .academic-swiper-dot.academic-active {
-    background: #002f59;
+    background: #7A1215;
     transform: scale(1.2);
 }
 
@@ -26688,12 +26686,12 @@ font-size: 40px;
     width: 200px;
     height: 200px;
     margin: 0 auto 20px;
-    box-shadow: 0 10px 20px rgba(0, 47, 89, 0.2);
+    box-shadow: 0 10px 20px rgba(122, 18, 21, 0.15);
 }
 
 .thought-principal-name {
     text-align: center;
-    color: #002f59;
+    color: #7A1215;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -26713,16 +26711,16 @@ font-size: 40px;
 }
 
 .thought-section-title {
-    color: #002f59;
+    color: #7A1215;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
-    border-bottom: 2px solid #002f59;
+    border-bottom: 2px solid #7A1215;
     padding-bottom: 5px;
 }
 
 .thought-text {
-    background: linear-gradient(135deg, rgba(0, 47, 89, 0.05) 0%, rgba(0, 47, 89, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(122, 18, 21, 0.04) 0%, rgba(122, 18, 21, 0.08) 100%);
     padding: 20px;
     border-radius: 15px;
     font-style: italic;
@@ -26738,7 +26736,7 @@ font-size: 40px;
 .thought-text::before {
     content: '"';
     font-size: 60px;
-    color: #002f59;
+    color: #7A1215;
     position: absolute;
     top: -10px;
     left: 15px;
@@ -26747,7 +26745,7 @@ font-size: 40px;
 
 .thought-author {
     text-align: right;
-    color: #002f59;
+    color: #7A1215;
     font-size: 12px;
     margin-top: 15px;
     font-weight: 600;
@@ -26757,7 +26755,7 @@ font-size: 40px;
     position: absolute;
     width: 60px;
     height: 60px;
-    background: radial-gradient(circle, rgba(0, 47, 89, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(122, 18, 21, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     top: 20px;
     right: 20px;

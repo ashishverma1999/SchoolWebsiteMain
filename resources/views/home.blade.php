@@ -397,7 +397,7 @@
 </section>
 
 <!-- Call to Action Banner -->
-<section class="py-4 py-md-5 bg-dark text-white text-center">
+<section class="py-4 py-md-5 text-white text-center" style="background: linear-gradient(135deg, #3A0507 0%, #580B0D 50%, #7A1215 100%) !important;">
     <div class="container px-3">
         <h2 class="fw-bold text-white mb-2" style="font-size: clamp(1.4rem, 3.5vw, 2.2rem);">Admissions Open For Session 2026-27</h2>
         <p class="lead text-light mb-4" style="max-width: 700px; margin: 0 auto; font-size: clamp(0.9rem, 2vw, 1.1rem);">Join {{ config('school.name') }}, {{ config('school.location') }} and build a bright future for your child.</p>
@@ -524,7 +524,7 @@
     .blogs-pagination .swiper-pagination-bullet-active {
         width: 22px;
         border-radius: 10px;
-        background: #0f172a;
+        background: #7A1215;
     }
 
     /* Testimonials Cards Styling */
@@ -596,7 +596,7 @@
     .testimonials-pagination .swiper-pagination-bullet-active {
         width: 22px;
         border-radius: 10px;
-        background: #0f172a;
+        background: #7A1215;
     }
 </style>
 

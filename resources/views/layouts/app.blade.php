@@ -77,8 +77,134 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .cursor-pointer {
-            cursor: pointer;
+        /* =========================================================
+        BRAND THEME & COLOR SYSTEM (MATCHING MAROON LOGO)
+        ========================================================= */
+        :root {
+            --brand-primary: #7A1215;
+            --brand-primary-dark: #580B0D;
+            --brand-primary-light: #9B1B1F;
+            --brand-primary-subtle: #FDF4F4;
+            --brand-primary-border: #F3C5C7;
+            --brand-accent-gold: #D97706;
+            --brand-accent-warm: #F59E0B;
+            --brand-dark: #160A0B;
+            --rt-primary: #7A1215;
+            --rt-primary-1: #7A1215;
+            --rt-primary-2: #7A1215;
+            --rt-secondary: #4A0B0D;
+            --rt-theme: #7A1215;
+        }
+
+        /* Bootstrap & Global Color Overrides */
+        .text-primary {
+            color: #7A1215 !important;
+        }
+
+        .bg-primary {
+            background-color: #7A1215 !important;
+        }
+
+        .border-primary {
+            border-color: #7A1215 !important;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #7A1215 0%, #9B1B1F 100%) !important;
+            border-color: #7A1215 !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 14px rgba(122, 18, 21, 0.25) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active {
+            background: linear-gradient(135deg, #580B0D 0%, #7A1215 100%) !important;
+            border-color: #580B0D !important;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(122, 18, 21, 0.35) !important;
+        }
+
+        .btn-outline-primary {
+            color: #7A1215 !important;
+            border-color: #7A1215 !important;
+            background: transparent !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .btn-outline-primary:hover,
+        .btn-outline-primary:focus,
+        .btn-outline-primary:active {
+            background: #7A1215 !important;
+            border-color: #7A1215 !important;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(122, 18, 21, 0.25) !important;
+        }
+
+        .badge.bg-primary {
+            background-color: #7A1215 !important;
+            color: #ffffff !important;
+        }
+
+        .badge.bg-warning {
+            background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%) !important;
+            color: #ffffff !important;
+        }
+
+        /* Top Bar Styling */
+        .top-bar {
+            background: linear-gradient(90deg, #4A080A 0%, #580B0D 50%, #4A080A 100%) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+        }
+
+        .top-bar .affiliation-badge {
+            background: rgba(255, 255, 255, 0.15) !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            color: #ffffff !important;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            letter-spacing: 0.3px;
+        }
+
+        /* Navigation Menu Accents */
+        .navigation__menu--item.active > .navigation__menu--item__link,
+        .navigation__menu--item:hover > .navigation__menu--item__link {
+            color: #7A1215 !important;
+        }
+
+        .navigation__menu--item.has-arrow:hover::before {
+            color: #7A1215 !important;
+        }
+
+        .navigation__menu--item:hover .navigation__menu--item__link::before {
+            background: #7A1215 !important;
+        }
+
+        .submenu li:hover > a {
+            color: #7A1215 !important;
+        }
+
+        .hover-primary:hover {
+            color: #E88386 !important;
+        }
+
+        /* Notice Ticker */
+        .notice-ticker {
+            background: linear-gradient(90deg, #580B0D 0%, #7A1215 50%, #580B0D 100%) !important;
+            border-bottom: 2px solid #D97706 !important;
+        }
+
+        /* Progress wrap */
+        .progress-wrap {
+            color: #7A1215 !important;
+        }
+
+        .progress-wrap svg.progress-circle path {
+            stroke: #7A1215 !important;
         }
 
 
