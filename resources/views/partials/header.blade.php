@@ -76,9 +76,9 @@
                     <div class="header__right d-flex align-items-center gap-2">
                         <a href="{{ route('admission') }}" class="btn btn-primary d-none d-sm-inline-block rounded-pill px-3 py-2 btn-sm fw-bold">Admission Open</a>
                         <div class="header__right--item d-lg-none">
-                            <div id="menu-btn" class="menu__trigger cursor-pointer p-2 rounded bg-light border">
+                            <button type="button" id="menu-btn" class="menu__trigger cursor-pointer rounded border d-flex align-items-center justify-content-center" aria-label="Open mobile navigation menu">
                                 <i class="fa-solid fa-bars text-dark fs-4"></i>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>

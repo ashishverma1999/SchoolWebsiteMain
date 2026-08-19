@@ -506,7 +506,8 @@
                 height: auto !important;
                 min-height: 0 !important;
                 margin-top: 0 !important;
-                padding: 6px 0 !important;
+                padding: 8px 12px !important;
+                gap: 8px !important;
             }
 
 
@@ -520,33 +521,67 @@
                 margin: 0 !important;
                 padding: 0 !important;
                 min-height: 0 !important;
+                flex: 1 1 auto !important;
+                min-width: 0 !important;
+                max-width: calc(100% - 54px) !important;
+            }
+
+            .header__logo a {
+                display: flex !important;
+                align-items: center !important;
+                min-width: 0 !important;
+                max-width: 100% !important;
             }
 
             .header__logo img {
-                width: 44px !important;
-                height: 44px !important;
-                max-width: 44px !important;
-                max-height: 44px !important;
+                width: 42px !important;
+                height: 42px !important;
+                max-width: 42px !important;
+                max-height: 42px !important;
                 object-fit: contain !important;
                 margin-right: 8px !important;
+                flex-shrink: 0 !important;
+            }
+
+            .school-name {
+                min-width: 0 !important;
+                flex: 1 1 auto !important;
+                overflow: hidden !important;
             }
 
             .brand-title {
-                font-size: 14px !important;
-                line-height: 1.1 !important;
+                font-size: clamp(12px, 3.8vw, 15px) !important;
+                line-height: 1.2 !important;
                 margin: 0 !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
             }
 
             .brand-subtitle {
-                font-size: 9px !important;
+                font-size: clamp(9px, 2.6vw, 11px) !important;
                 line-height: 1.1 !important;
                 margin: 2px 0 0 !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
             }
 
 
             /* =====================================================
             MOBILE MENU BUTTON
             ===================================================== */
+
+            .header__right {
+                flex-shrink: 0 !important;
+                display: flex !important;
+                align-items: center !important;
+                margin-left: auto !important;
+            }
+
+            .header__right--item {
+                flex-shrink: 0 !important;
+            }
 
             .header__nav,
             .main-menu,
@@ -564,10 +599,100 @@
                 margin: 0 !important;
             }
 
-            .menu__trigger {
-                padding: 6px 10px !important;
-                min-height: 0 !important;
-                height: auto !important;
+            .menu__trigger,
+            #menu-btn {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 42px !important;
+                height: 42px !important;
+                min-width: 42px !important;
+                min-height: 42px !important;
+                padding: 0 !important;
+                background: #ffffff !important;
+                border: 1.5px solid #cbd5e1 !important;
+                border-radius: 10px !important;
+                cursor: pointer !important;
+                touch-action: manipulation !important;
+                -webkit-tap-highlight-color: transparent !important;
+                box-shadow: none !important;
+                -webkit-box-shadow: none !important;
+                outline: none !important;
+                transition: background 0.2s ease, border-color 0.2s ease !important;
+                z-index: 100 !important;
+                position: relative !important;
+            }
+
+            .menu__trigger:hover,
+            .menu__trigger:focus,
+            .menu__trigger:focus-visible,
+            .menu__trigger:active,
+            #menu-btn:hover,
+            #menu-btn:focus,
+            #menu-btn:focus-visible,
+            #menu-btn:active {
+                box-shadow: none !important;
+                -webkit-box-shadow: none !important;
+                outline: none !important;
+            }
+
+            .menu__trigger:active,
+            #menu-btn:active {
+                background: #f1f5f9 !important;
+                transform: scale(0.96) !important;
+            }
+
+            .menu__trigger i,
+            #menu-btn i {
+                font-size: 18px !important;
+                color: #0f172a !important;
+                pointer-events: none !important;
+            }
+
+            /* Offcanvas Mobile Drawer Fixes */
+            .side-bar {
+                z-index: 1900 !important;
+                max-width: 85vw !important;
+            }
+
+            .side-bar .close-icon-menu {
+                position: absolute !important;
+                top: 15px !important;
+                right: 15px !important;
+                left: auto !important;
+                margin: 0 !important;
+                width: 38px !important;
+                height: 38px !important;
+                background: #f1f5f9 !important;
+                color: #0f172a !important;
+                border-radius: 50% !important;
+                border: 1px solid #cbd5e1 !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                cursor: pointer !important;
+                touch-action: manipulation !important;
+                z-index: 20 !important;
+            }
+
+            #anywhere-home {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                background: rgba(0, 0, 0, 0.6) !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                transition: opacity 0.3s ease, visibility 0.3s ease !important;
+                pointer-events: none !important;
+                z-index: 1800 !important;
+            }
+
+            #anywhere-home.bgshow {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
             }
 
 
@@ -1223,8 +1348,72 @@
     <script src="{{ asset('assets/js/plugins/resize-sensor.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/twinmax.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/nice-select.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.flexslider.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <!-- Fail-safe Mobile Menu Touch & Click Handler -->
+    <script>
+        (function() {
+            function initMobileNav() {
+                var menuBtn = document.getElementById('menu-btn');
+                var sideBar = document.getElementById('side-bar');
+                var anywhereHome = document.getElementById('anywhere-home');
+                var closeBtns = document.querySelectorAll('.close-icon-menu');
+
+                function toggleMenu(open, e) {
+                    if (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                    if (sideBar) {
+                        if (open) sideBar.classList.add('show');
+                        else sideBar.classList.remove('show');
+                    }
+                    if (anywhereHome) {
+                        if (open) anywhereHome.classList.add('bgshow');
+                        else anywhereHome.classList.remove('bgshow');
+                    }
+                    document.body.style.overflow = open ? 'hidden' : '';
+                }
+
+                if (menuBtn) {
+                    menuBtn.addEventListener('click', function(e) {
+                        toggleMenu(true, e);
+                    });
+                    menuBtn.addEventListener('touchend', function(e) {
+                        toggleMenu(true, e);
+                    }, { passive: false });
+                }
+
+                closeBtns.forEach(function(btn) {
+                    btn.addEventListener('click', function(e) {
+                        toggleMenu(false, e);
+                    });
+                    btn.addEventListener('touchend', function(e) {
+                        toggleMenu(false, e);
+                    }, { passive: false });
+                });
+
+                if (anywhereHome) {
+                    anywhereHome.addEventListener('click', function(e) {
+                        toggleMenu(false, e);
+                    });
+                    anywhereHome.addEventListener('touchend', function(e) {
+                        toggleMenu(false, e);
+                    }, { passive: false });
+                }
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') toggleMenu(false, e);
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileNav);
+            } else {
+                initMobileNav();
+            }
+        })();
+    </script>
 
     @stack('scripts')
 </body>

@@ -1,6 +1,6 @@
 <!-- Mobile Navigation Drawer / Offcanvas -->
 <div id="side-bar" class="side-bar header-two">
-    <button class="close-icon-menu"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+    <button type="button" class="close-icon-menu" aria-label="Close navigation menu"><i class="fa-sharp fa-solid fa-xmark"></i></button>
     
     <div class="thumbnail mb-3 text-center">
         <img src="{{ asset(config('school.logo')) }}" alt="{{ config('school.name') }} Logo" style="width: 65px; height: 65px; object-fit: contain;" class="rounded-circle shadow-sm bg-white p-1">
