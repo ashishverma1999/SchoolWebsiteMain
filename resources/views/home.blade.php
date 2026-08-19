@@ -296,6 +296,106 @@
     </div>
 </section>
 
+<!-- Our Blog Section -->
+<section class="blog-section py-4 py-md-5 bg-white border-top">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-4 mb-md-5">
+            <h2 class="testimonials-heading mb-2">Our Blog</h2>
+            <p class="testimonials-subheading text-muted mb-0">You'll find something to spark your curiosity and enhance</p>
+        </div>
+
+        <!-- Blog Swiper Slider -->
+        <div class="blog-slider-container position-relative px-1 px-sm-2">
+            <div class="swiper blog-slider">
+                <div class="swiper-wrapper pb-5">
+                    @foreach($blogs as $blog)
+                    <div class="swiper-slide h-auto">
+                        <div class="blog-card">
+                            <div class="blog-card-top">
+                                <!-- Blog Image -->
+                                <div class="blog-card-image mb-3">
+                                    <img src="{{ asset($blog['image']) }}" alt="{{ $blog['title'] }}" class="w-100 h-100 object-fit-cover">
+                                </div>
+
+                                <!-- Blog Title -->
+                                <h4 class="blog-card-title mb-2">{{ $blog['title'] }}</h4>
+
+                                <!-- Blog Excerpt -->
+                                <p class="blog-card-excerpt mb-3">{{ $blog['excerpt'] }}</p>
+                            </div>
+
+                            <!-- Blog Meta Footer -->
+                            <div class="blog-card-meta d-flex align-items-center justify-content-between pt-2 border-top text-muted small">
+                                <span><i class="fa-solid fa-user me-1 text-secondary"></i> {{ $blog['author'] }}</span>
+                                <span><i class="fa-solid fa-calendar-days me-1 text-secondary"></i> {{ $blog['date'] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+                <!-- Slider Pagination Dots -->
+                <div class="swiper-pagination blogs-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Showcase Slider Section -->
+<section class="testimonials-section py-4 py-md-5 bg-white border-top">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-4 mb-md-5">
+            <h2 class="testimonials-heading mb-2">Testimonials</h2>
+            <p class="testimonials-subheading text-muted mb-0">You'll find something to spark your curiosity and enhance</p>
+        </div>
+
+        <!-- Testimonials Swiper Slider -->
+        <div class="testimonials-slider-container position-relative px-1 px-sm-2">
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper pb-5">
+                    @foreach($testimonials as $testimonial)
+                    <div class="swiper-slide h-auto">
+                        <div class="testimonial-card">
+                            <!-- Star Rating -->
+                            <div class="testimonial-stars mb-3">
+                                @for($i = 1; $i <= 5; $i++)
+                                    @if($i <= $testimonial['rating'])
+                                        <i class="fa-solid fa-star text-dark me-1"></i>
+                                    @else
+                                        <i class="fa-regular fa-star text-secondary opacity-50 me-1"></i>
+                                    @endif
+                                @endfor
+                            </div>
+
+                            <!-- Quote Body -->
+                            <p class="testimonial-text mb-4">
+                                {{ $testimonial['quote'] }}
+                            </p>
+
+                            <!-- Author & Quote Icon -->
+                            <div class="testimonial-footer d-flex align-items-center justify-content-between mt-auto pt-2">
+                                <div class="testimonial-author">
+                                    <h6 class="author-name fw-bold mb-0 text-dark">{{ $testimonial['name'] }}</h6>
+                                    <small class="author-role text-muted">{{ $testimonial['role'] }}</small>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <span class="quote-symbol">”</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+                <!-- Slider Pagination Dots -->
+                <div class="swiper-pagination testimonials-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Call to Action Banner -->
 <section class="py-4 py-md-5 bg-dark text-white text-center">
     <div class="container px-3">
@@ -307,6 +407,198 @@
         </div>
     </div>
 </section>
+
+<style>
+    .testimonials-heading {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        font-size: clamp(2rem, 3.8vw, 2.75rem);
+        font-weight: 500;
+        color: #111827;
+        letter-spacing: -0.5px;
+    }
+
+    .testimonials-subheading {
+        font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Blog Cards Styling */
+    .blog-card {
+        background: #ffffff;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 18px;
+        padding: 16px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        border-color: #cbd5e1;
+    }
+
+    .blog-card-top {
+        width: 100%;
+        display: block;
+    }
+
+    .blog-card-image {
+        width: 100% !important;
+        height: 180px !important;
+        border-radius: 14px !important;
+        overflow: hidden !important;
+        position: relative !important;
+        display: block !important;
+        background-color: #f1f5f9;
+    }
+
+    .blog-card-image img {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        min-height: 100% !important;
+        max-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        transition: transform 0.4s ease !important;
+    }
+
+    .blog-card:hover .blog-card-image img {
+        transform: scale(1.05) !important;
+    }
+
+    .blog-card-title {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #111827;
+        line-height: 1.35;
+    }
+
+    .blog-card-excerpt {
+        color: #64748b;
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .blog-card-meta {
+        font-size: 0.82rem;
+    }
+
+    @media (max-width: 767.98px) {
+        .blog-card-image {
+            height: 200px !important;
+        }
+
+        .blog-card {
+            padding: 14px;
+        }
+
+        .blog-card-title {
+            font-size: 1.1rem;
+        }
+    }
+
+    .blogs-slider .swiper-pagination {
+        bottom: 0px !important;
+    }
+
+    .blogs-pagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: #cbd5e1;
+        opacity: 1;
+        margin: 0 4px !important;
+        transition: all 0.3s ease;
+    }
+
+    .blogs-pagination .swiper-pagination-bullet-active {
+        width: 22px;
+        border-radius: 10px;
+        background: #0f172a;
+    }
+
+    /* Testimonials Cards Styling */
+    .testimonial-card {
+        background: #ffffff;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 18px;
+        padding: 30px 26px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        border-color: #cbd5e1;
+    }
+
+    .testimonial-stars {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+
+    .testimonial-text {
+        color: #4b5563;
+        font-size: 0.95rem;
+        line-height: 1.65;
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+
+    .author-name {
+        font-size: 1rem;
+        letter-spacing: -0.2px;
+    }
+
+    .author-role {
+        font-size: 0.85rem;
+    }
+
+    .testimonial-quote-icon .quote-symbol {
+        font-size: 2.6rem;
+        line-height: 0.8;
+        font-family: Georgia, serif;
+        color: #f87171;
+        opacity: 0.8;
+        display: inline-block;
+        user-select: none;
+    }
+
+    .testimonials-slider .swiper-pagination {
+        bottom: 0px !important;
+    }
+
+    .testimonials-pagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: #cbd5e1;
+        opacity: 1;
+        margin: 0 4px !important;
+        transition: all 0.3s ease;
+    }
+
+    .testimonials-pagination .swiper-pagination-bullet-active {
+        width: 22px;
+        border-radius: 10px;
+        background: #0f172a;
+    }
+</style>
 
 <script>
     let currentSlide = 0;
@@ -367,6 +659,68 @@
     document.addEventListener('DOMContentLoaded', function() {
         showSlide(0);
         startTimer();
+
+        // Initialize Blog Swiper Slider
+        if (document.querySelector('.blog-slider') && typeof Swiper !== 'undefined') {
+            new Swiper('.blog-slider', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.blogs-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 24,
+                    }
+                }
+            });
+        }
+
+        // Initialize Testimonials Swiper Slider
+        if (document.querySelector('.testimonials-slider') && typeof Swiper !== 'undefined') {
+            new Swiper('.testimonials-slider', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.testimonials-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 28,
+                    }
+                }
+            });
+        }
     });
 </script>
 @endsection

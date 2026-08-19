@@ -60,6 +60,71 @@ class HomeController extends Controller
             ['name' => 'Kavya Pandey', 'percentage' => '95.8%', 'stream' => 'Science', 'rank' => '3rd Rank', 'year' => '2024-25', 'image' => 'assets/images/toppers/student6.jpg'],
         ];
 
-        return view('home', compact('banners', 'notices', 'events', 'toppersX', 'toppersXII'));
+        $testimonials = [
+            [
+                'name' => 'Aarav Sharma',
+                'role' => 'Student',
+                'rating' => 4,
+                'quote' => '"We are extremely happy with School. The teachers are dedicated, and the curriculum is well-structured. Our child has shown remarkable growth."',
+            ],
+            [
+                'name' => 'Priya Patel',
+                'role' => 'Student',
+                'rating' => 4,
+                'quote' => '"The school provides an inspiring and supportive environment. The modern computer labs, sports facilities, and caring teachers make every day exciting."',
+            ],
+            [
+                'name' => 'Rajesh Gupta',
+                'role' => 'Parent',
+                'rating' => 5,
+                'quote' => '"St. Anthony\'s School has exceeded our expectations. The balance between academic excellence and moral values makes it the ideal place for student development."',
+            ],
+            [
+                'name' => 'Sneha Verma',
+                'role' => 'Student',
+                'rating' => 4,
+                'quote' => '"I love the interactive learning approach and outdoor adventure activities. The teachers encourage us to explore our potential in every field."',
+            ],
+        ];
+
+        $blogs = [
+            [
+                'title' => 'Meet Our Faculty',
+                'excerpt' => 'Our team of experienced, passionate educators who nurture every child....',
+                'author' => 'Admin',
+                'date' => 'Aug 08, 2025',
+                'image' => 'assets/images/blog/blog-2025-08-08-172249.jpg',
+            ],
+            [
+                'title' => 'Infrastructure and Facilities',
+                'excerpt' => 'A tour of our state-of-the-art facilities including smart classrooms, labs, and library....',
+                'author' => 'Admin',
+                'date' => 'Aug 08, 2025',
+                'image' => 'assets/images/blog/blog-2025-08-08-172249.jpg',
+            ],
+            [
+                'title' => 'Admission Process 2025-2026',
+                'excerpt' => 'Everything you need to know about enrolling your child at St. Anthony\'s Convent School....',
+                'author' => 'Admin',
+                'date' => 'Aug 08, 2025',
+                'image' => 'assets/images/blog/blog-2025-08-08-172249.jpg',
+            ],
+            [
+                'title' => 'Student Achievements',
+                'excerpt' => 'Celebrating the success stories of our talented students in academics and sports....',
+                'author' => 'Admin',
+                'date' => 'Aug 08, 2025',
+                'image' => 'assets/images/blog/blog-2025-08-08-172249.jpg',
+            ],
+            [
+                'title' => 'Holistic Student Development',
+                'excerpt' => 'How we foster leadership, creativity, and moral discipline alongside academic excellence....',
+                'author' => 'Admin',
+                'date' => 'Aug 08, 2025',
+                'image' => 'assets/images/blog/blog-2025-08-08-172249.jpg',
+            ],
+        ];
+
+        return view('home', compact('banners', 'notices', 'events', 'toppersX', 'toppersXII', 'testimonials', 'blogs'));
     }
 }
